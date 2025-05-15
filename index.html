@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Divyesha Bari | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #fff1eb, #ace0f9);
+      color: #1e293b;
+      scroll-behavior: smooth;
+    }
+    header {
+      text-align: center;
+      background: linear-gradient(135deg, #a78bfa, #60a5fa);
+      padding: 100px 20px 60px;
+      color: white;
+      animation: fadeInDown 1s ease-out;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-top: 10px;
+      color: #fef9ff;
+    }
+    img.hero-img {
+      margin-top: 30px;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #eab308;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    nav {
+      margin: 30px 0;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      position: relative;
+      transition: transform 0.3s;
+    }
+    nav a:hover {
+      transform: scale(1.1);
+    }
+    nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0;
+      background: #fff;
+      transition: width 0.3s;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #f97316;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: #c2410c;
+      transform: scale(1.05);
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .section-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #0f172a;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      height: 4px;
+      width: 60px;
+      background: #8b5cf6;
+      margin: 10px auto 0;
+      border-radius: 4px;
+    }
+    .experience, .project, .education {
+      background: linear-gradient(to right, #fdf2f8, #f3e8ff);
+      padding: 25px;
+      border-left: 6px solid #c084fc;
+      border-radius: 16px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .experience:hover, .project:hover, .education:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .certs ul {
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .certs li {
+      background: #dbeafe;
+      padding: 16px 20px;
+      border-radius: 12px;
+      font-weight: 500;
+      color: #1d4ed8;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+    }
+    .certs li::before {
+      content: "\f058";
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      color: #10b981;
+      margin-right: 10px;
+    }
+    .icon-text {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+      color: #334155;
+    }
+    .icon-text i {
+      color: #7c3aed;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b7280;
+      padding: 40px 20px;
+      background: #f1f5f9;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Divyesha Bari</h1>
+    <p>Software Engineer | UI/UX Enthusiast</p>
+    <img src="https://i.ibb.co/3yvfmc0P/divimg.jpg" alt="divimg" border="0" class="hero-img" />
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="DIVYESHA.pdf" class="btn" download><i class="fa-solid fa-download"></i> Resume</a>
+  </header>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p style="text-align:center; max-width: 800px; margin: 0 auto;">
+      I'm currently pursuing a BE in Computer Science & Technology at St. John's College. Passionate about building intuitive software solutions with a blend of design and technology.
+    </p>
+    <p style="text-align:center; max-width: 800px; margin: 20px auto 0;">
+      <strong>Skills:</strong> HTML, CSS, Bootstrap, Core & Advanced Java, Python, MySQL, JDBC, Apache, Problem Solving, Leadership
+    </p>
+  </section>
+
+  <section id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="education">
+      <h3><i class="fa-solid fa-graduation-cap"></i> St. John's College of Engineering & Technology</h3>
+      <p>BE in Computer Science & Technology | CGPA: 7.23<br />Dec 2021 – May 2025</p>
+    </div>
+    <div class="education">
+      <h3><i class="fa-solid fa-school"></i> BSES Junior College of Science</h3>
+      <p>Senior Secondary (XII) – Science | Percentage: 85%<br />June 2019 – June 2021</p>
+    </div>
+    <div class="education">
+      <h3><i class="fa-solid fa-school"></i> St. Mary's High School</h3>
+      <p>Secondary (X) | Percentage: 75.67%<br />Jun 2018 – Jun 2019</p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2 class="section-title">Experience</h2>
+    <div class="experience">
+      <h3><i class="fa-solid fa-briefcase"></i> JMedia Corporation – UI/UX & Web Dev Intern</h3>
+      <p>Jun 2024 – Dec 2024<br />Designed and built responsive user interfaces and web components.</p>
+    </div>
+    <div class="experience">
+      <h3><i class="fa-solid fa-briefcase"></i> SDAC – Software Developer Intern</h3>
+      <p>Dec 2024 – Feb 2025<br />Developed Java-based dynamic web projects.</p>
+    </div>
+    <div class="experience">
+      <h3><i class="fa-solid fa-user-graduate"></i> TechLearn.live – Campus Leader</h3>
+      <p>Dec 2021 – Jan 2022<br />Led campus outreach and organized tech sessions.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="project">
+      <h3><i class="fa-solid fa-laptop-code"></i> Sign Language Recognition</h3>
+      <p>Aug 2023 – May 2024<br />Deep learning + computer vision project to bridge communication for the hearing-impaired.</p>
+    </div>
+  </section>
+
+  <section id="certifications" class="certs">
+    <h2 class="section-title">Certifications</h2>
+    <ul>
+      <li>Kubernetes for Developers – Udemy</li>
+      <li>Robotics – Infosys Springboard</li>
+      <li>Microsoft Excel – Coursera</li>
+      <li>Intercultural Management – ESCP Business School</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="icon-text"><i class="fa-solid fa-envelope"></i><p>divyeshabari@gmail.com</p></div>
+    <div class="icon-text"><i class="fa-solid fa-phone"></i><p>9022524626</p></div>
+    <div class="icon-text"><i class="fa-solid fa-location-dot"></i><p>Mumbai, Maharashtra, India</p></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Divyesha Bari. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
